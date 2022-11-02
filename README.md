@@ -1,4 +1,4 @@
-# insert-data-with-only-array 
+# insert data with only array 
 
 Repository ini berisi tugas untuk melakukan insert data dan menampilkannya dengan menggunakan array.
 
