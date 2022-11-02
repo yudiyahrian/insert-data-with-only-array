@@ -6,6 +6,11 @@ class biodata{
     public $jurusan = '';
     public $sekolah = '';
 
+    protected $email = '';
+    protected $no_hp = '';
+    protected $jenis_kelamin = '';
+    protected $alamat = '';
+
     public function data(){
     if (isset($_POST['add'])){
         $this->nama = $_POST['name'];
@@ -14,18 +19,16 @@ class biodata{
         $this->sekolah = $_POST['sekolah'];
     }
 
-        return [
+    $data_kelas = [
             "nama"=>$this->nama,
             "kelas"=>$this->kelas,
             "jurusan"=>$this->jurusan,
             "sekolah"=>$this->sekolah,
-        ];
+    ];
+
+        return $data_kelas;
     }
 
-    protected $email = '';
-    protected $no_hp = '';
-    protected $jenis_kelamin = '';
-    protected $alamat = '';
 }
 
 class bio_siswa extends biodata{
@@ -38,12 +41,13 @@ class bio_siswa extends biodata{
         $this->alamat = $_POST['alamat'];
     }
 
-        return [
-            "email"=>$this->email,
-            "no_hp"=>$this->no_hp,
-            "jenis_kelamin"=>$this->jenis_kelamin,
-            "alamat"=>$this->alamat,
-        ];
+    $data_siswa = [
+        "email"=>$this->email,
+        "no_hp"=>$this->no_hp,
+        "jenis_kelamin"=>$this->jenis_kelamin,
+        "alamat"=>$this->alamat,
+    ];
+        return $data_siswa;
     }
 }
 ?>
